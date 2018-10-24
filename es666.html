@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE>
     <html>
     <head>
         <meta charset="utf-8">
@@ -49,6 +49,43 @@
                 $(this).parents('.item').remove();
             }
         })
+        $(function () {
+            console.log(53,arguments);
+            /*var i = 0;
+            do{
+                i +=2;
+            }while (i<10);
+            console.log(57,i);*/
+            var i = 0;
+            while(i<10){
+                i+=2;
+            }
+            console.log(62,i);
+        })
+
+        /*(loadFn = ()=>{
+          let person1 = {
+            toLocalString: () => {
+                return 'LocalNike'
+            },
+            toString: () =>{
+                return 'Nike'
+            }
+          }
+          let person2 = {
+            toLocalString: () => {
+              return 'LocalDavid'
+            },
+            toString: () =>{
+              return 'David'
+            }
+          }
+          let people = [person1,person2]
+          console.log(84,people);
+        })()*/
+        (autoFn=()=>{
+          console.log('auto');
+        })()
     </script>
     </body>
-    </html>
+</html>

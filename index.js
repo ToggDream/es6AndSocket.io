@@ -6,7 +6,7 @@ app.get('/', function(req, res){
     //res.send('<h1>Hello world</h1>');
     res.sendFile('/workspace/es6/client.html');
 });
-//io.emit('some event',{ for: 'everyone' });
+io.emit('some event',{ for: 'everyone' });
 
 io.on('connection', function(socket){
     console.log('a user connected');
@@ -16,6 +16,8 @@ io.on('connection', function(socket){
     //接受客户端发送事件
     socket.on('chat message', function(msg){
         console.log('message: ' + msg);
+        console.log(20,'xxx',everyone);
+        sessionStorage.setItem('socket.io')
         io.emit('chat message',msg);
     });
     //广播
