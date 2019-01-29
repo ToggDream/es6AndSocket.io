@@ -36,7 +36,7 @@
     </div>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script>
-        $(document).on('click', '.sort-down', function(){
+        /*$(document).on('click', '.sort-down', function(){
             //判断是否有下一个节点
             if($(this).parents('.item').nextAll().length > 0){
                 $(this).parents('.item').next().after($(this).parents('.item').prop('outerHTML'));
@@ -51,11 +51,11 @@
         })
         $(function () {
             console.log(53,arguments);
-            /*var i = 0;
+            /!*var i = 0;
             do{
                 i +=2;
             }while (i<10);
-            console.log(57,i);*/
+            console.log(57,i);*!/
             var i = 0;
             while(i<10){
                 i+=2;
@@ -63,7 +63,7 @@
             console.log(62,i);
         })
 
-        /*(loadFn = ()=>{
+        /!*(loadFn = ()=>{
           let person1 = {
             toLocalString: () => {
                 return 'LocalNike'
@@ -82,10 +82,39 @@
           }
           let people = [person1,person2]
           console.log(84,people);
-        })()*/
+        })()*!/
         (autoFn=()=>{
           console.log('auto');
-        })()
+        })()*/
+        let mapArr = [4,3,5,1],templateArr=[1,2,3,4,5],num=0;
+        /*if(mapArr.length === 0){
+          num = 1
+        }else {
+          for(let j of templateArr){
+            let count = 0;
+            for(let i of mapArr){
+              if(j !== i){
+                count++;
+              }
+            }
+            if(count === mapArr.length){
+              num = j;
+              break;
+            }
+          }
+
+          if(num === 0){
+            num = mapArr.length+1
+          }
+        }
+        console.log(num);*/
+        for(let i =1;i<=5;i++){
+          if(mapArr.indexOf(i) === -1){
+            num = i ;
+            break;
+          }
+        }
+        console.log(117,num);
     </script>
     </body>
 </html>
